@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pictorial</title>
+  <link rel="icon" type="image/x-icon" href="test.ico">
+  <link rel="stylesheet" href="contect-us.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html"><img src="logo.png" alt="Your Logo" class="logo"></a>
+      <ul class="menu-links">
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="1.html">Products</a></li>
+        <li><a href="about-ua.html">About us</a></li>
+        <li><a href="contect-us.html">Contact us</a></li>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="content">
+      <h2>Contact Information</h2>
+      <br>
+      <br>
+
+
+      <img src="homeicon.png" alt="home" class="Home">
+      <h1>Address:</h1>
+      <p>Aarambh Flats,</p>
+      <p>Shivanand Park Society, Sukheshwar Society,</p>
+      <p>Mehsana, Gujarat 384001</p>
+      <br>
+
+      <img src="homeicon.png" alt="home" class="Home">
+      <h1>contect number:</h1>
+      <p>1. <a href="tel:+91 0123456789"><span>+91 0123456789</span></a></p>
+      <p>2. <a href="tel:+91 0123456789"><span>+91 0123456789</span></a></p>
+      <p>3. <a href="tel:+91 0123456789"><span>+91 0123456789</span></a></p>
+      <p>4. <a href="tel:+91 0123456789"><span>+91 0123456789</span></a></p>
+      <p>5. <a href="tel:+91 0123456789"><span>+91 0123456789</span></a></p>
+
+      <img src="locasun.png" alt="home" class="Home">
+      <h1>Location:</h1>
+      <p style="position:relative; padding-bottom:56.25%; overflow:hidden;"><iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.276438126643!2d72.38500227537483!3d23.594416878777064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c43d7d4e7d609%3A0x8903e71f044cf4e2!2sAarambh%20Flats%2C%20Shivanand%20Park%20Society%2C%20Sukheshwar%20Society%2C%20Mehsana%2C%20Gujarat%20384001!5e0!3m2!1sen!2sin!4v1711253502870!5m2!1sen!2sin"
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p><br>
+
+
+      <img src="homeicon.png" alt="home" class="Home">
+      <h1>Email:</h1>
+      <p>1. <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+      <p>2. <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+      <p>3. <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+    </div>
+  </section>
+
+
+  <script>
+    const header = document.querySelector("header");
+    const hamburgerBtn = document.querySelector("#hamburger-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+    // Toggle mobile menu on hamburger button click
+    hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+    // Close mobile menu on close button click
+    closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+  </script>
+
+</body>
+
+</html>
