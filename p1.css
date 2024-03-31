@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+samp {
+  color: white;
+  /* Change color to white */
+}
+
+header {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  /* Position logo absolutely */
+  top: 70px;
+  /* Adjust top distance as needed */
+  left: 60px;
+  /* Adjust left distance as needed */
+  width: 200px;
+  /* Adjust width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  /* Zoom out the logo by 10% on hover */
+}
+
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #7152e1;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: url("bg2.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  padding-top: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+  color: #ff7200;
+  font: Embed code;
+}
+
+
+.hero-section .content p {
+  font-weight: 300;
+  max-width: 700px;
+  margin-top: 15px;
+}
+
+.img1 {
+  margin-top: 3%;
+  width: 550px;
+  /* Ensures the image doesn't exceed its container's width */
+  max-width: 100%;
+  height: auto;
+  /* Maintains aspect ratio of the image */
+  /* Aligns the image to the top of its containing element (in this case, the body) */
+  right: 5%;
+  /* Moves the image horizontally to the center */
+  animation: slideInFromRight 3s ease-in-out;
+}
+
+/* butoon for slideng image left and write */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    /* Start from 100% right of its container */
+    opacity: 0;
+    /* Start with 0 opacity */
+  }
+
+  75% {
+    transform: translateX(-100px);
+    /* Move slightly left */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Return to original position */
+  }
+}
+
+@media (max-width: 1241px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+
+  #hamburger-btn,
+  #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #000;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+
+  .hero-section .img1 {
+    width: 50%;
+    /* Set the width to 50% of the container */
+    max-width: 100%;
+    /* Ensures the image doesn't exceed its container's width */
+    height: auto;
+    /* Maintains aspect ratio of the image */
+    margin-top: 20%;
+    left: 30%;
+    /* Moves the image horizontally to the center */
+    animation: slideInFromRight 3s ease-in-out;
+  }
+}
